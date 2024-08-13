@@ -1,0 +1,9 @@
+services:
+  api:
+    container_name: api
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: mirfanduri/ci-cd-slack-integration
+    ports:
+      - "8081:8080"
