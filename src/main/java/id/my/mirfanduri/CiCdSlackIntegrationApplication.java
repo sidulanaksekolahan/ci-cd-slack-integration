@@ -12,11 +12,4 @@ public class CiCdSlackIntegrationApplication {
 		SpringApplication.run(CiCdSlackIntegrationApplication.class, args);
 	}
 
-	@Bean
-	public CommandLineRunner commandLineRunner() {
-		return args -> {
-			System.out.println("Test!");
-		};
-	}
-
 }
