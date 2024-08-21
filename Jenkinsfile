@@ -13,6 +13,9 @@ pipeline {
         stage('Build') {
             steps {
                 echo 'Building...'
+
+                // compile the code and build the JAR
+                sh './mvnw clean package'
             }
         }
 
