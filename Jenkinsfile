@@ -3,7 +3,7 @@ pipeline {
 
     stages {
         stage('Checkout') {
-            step {
+            steps {
                 echo 'Cloning repository'
                 // clone the repository
                 git url: 'https://github.com/sidulanaksekolahan/ci-cd-slack-integration.git', branch: 'master'
@@ -11,13 +11,13 @@ pipeline {
         }
 
         stage('Build') {
-            step {
+            steps {
                 echo 'Building...'
             }
         }
 
         stage('Deploy') {
-            step {
+            steps {
                 echo 'Deploying...'
             }
         }
