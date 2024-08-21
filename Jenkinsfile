@@ -25,8 +25,9 @@ pipeline {
         stage('Deploy') {
             steps {
                 echo 'Deploying...'
-                sh 'docker build -t mirfanduri/ci-cd-slack-integration .'
-                sh 'docker run -d -p 8081:8080 mirfanduri/ci-cd-slack-integration'
+                sh 'java -jar target/*.jar'
+                //sh 'docker build -t mirfanduri/ci-cd-slack-integration .'
+                //sh 'docker run -d -p 8081:8080 mirfanduri/ci-cd-slack-integration'
             }
         }
     }
