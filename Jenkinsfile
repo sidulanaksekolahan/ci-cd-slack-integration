@@ -14,6 +14,9 @@ pipeline {
             steps {
                 echo 'Building...'
 
+                // Grant execute permission to the mvnw script
+                sh 'chmod +x ./mvnw'
+
                 // compile the code and build the JAR
                 sh './mvnw clean package'
             }
